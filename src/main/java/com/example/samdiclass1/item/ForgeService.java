@@ -34,4 +34,14 @@ public class ForgeService {
                 .build();
         itemRepository.save(item);
     }
+
+    // 이름으로 조회
+    public ItemResponse findItemByName(String name) {
+        Item item = itemRepository.findByName(name).orElse(null);
+        // 만약 DB에 있다면
+        if (item == null) {
+            throw new IllegalArgumentException( name + "는 없는 아이템입니다.");
+        }
+        return ItemResponse.of(item);
+    }
 }
