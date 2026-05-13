@@ -64,4 +64,16 @@ public class ForgeService {
 
         return ItemResponse.of(item);
     }
+
+    // 아이템 삭제
+    public void deleteItem(String name) {
+        Item item = itemRepository.findByName(name).orElse(null);
+
+        // 만약 DB에 없다면
+        if (item == null) {
+            throw new IllegalArgumentException(name + "는 없는 아이템입니다.");
+        }
+
+        itemRepository.delete(item);
+    }
 }

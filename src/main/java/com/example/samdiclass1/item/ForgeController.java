@@ -23,4 +23,9 @@ public class ForgeController {
     public ItemResponse updateItem(@RequestBody UpdateItem request) {
         return forgeService.updateItem(request);
     }
+
+    @DeleteMapping
+    public void deleteItem(@RequestParam String name) {
+        forgeService.deleteItem(name);
+    }
 }
