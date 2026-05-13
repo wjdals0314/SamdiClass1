@@ -27,6 +27,6 @@ public class Item {
 
     @Setter // 수정이 될 수 있음
     private int enchancedLevel; // 강화 레벨
-
+    @Setter
     private int durability; // 내구도
 }

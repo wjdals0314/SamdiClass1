@@ -44,4 +44,24 @@ public class ForgeService {
         }
         return ItemResponse.of(item);
     }
+    // 강화 로직 넣기 전 일반 수정 메서드
+    public ItemResponse updateItem(UpdateItem request) {
+        Item item = itemRepository.findByName(request.name()).orElse(null);
+
+        // 만약 DB에 없다면
+        if (item == null) {
+            throw new IllegalArgumentException(request.name() + "는 없는 아이템입니다.");
+        }
+
+        // 공격력이 1보다 낮을 때
+        if (request.attackPower() <= 0) {
+            throw new IllegalArgumentException("공격력은 1 이상이어야 합니다.");
+        }
+        item.setAttackPower(request.attackPower());
+        item.setDurability(request.durability());
+
+        itemRepository.save(item);
+
+        return ItemResponse.of(item);
+    }
 }
