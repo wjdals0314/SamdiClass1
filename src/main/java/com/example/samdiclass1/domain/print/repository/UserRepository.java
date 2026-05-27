@@ -1,5 +1,6 @@
-package com.example.samdiclass1.print;
+package com.example.samdiclass1.domain.print.repository;
 
+import com.example.samdiclass1.domain.print.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // JpaRepository가 Spring Data Jpa가 제공해주는 DB의 기본 기능 모음

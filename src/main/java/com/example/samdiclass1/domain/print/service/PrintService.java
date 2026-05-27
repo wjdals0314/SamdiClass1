@@ -1,5 +1,8 @@
-package com.example.samdiclass1.print;
+package com.example.samdiclass1.domain.print.service;
 
+import com.example.samdiclass1.domain.print.entity.User;
+import com.example.samdiclass1.domain.print.repository.UserRepository;
+import com.example.samdiclass1.domain.print.dto.request.CreateUserRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

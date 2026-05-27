@@ -1,4 +1,4 @@
-package com.example.samdiclass1.item;
+package com.example.samdiclass1.global.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

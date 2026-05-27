@@ -1,4 +1,4 @@
-package com.example.samdiclass1.item;
+package com.example.samdiclass1.domain.item.entity;
 
 
 import jakarta.persistence.*;

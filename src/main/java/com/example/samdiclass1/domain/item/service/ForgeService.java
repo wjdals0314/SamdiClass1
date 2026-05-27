@@ -1,6 +1,11 @@
-package com.example.samdiclass1.item;
+package com.example.samdiclass1.domain.item.service;
 
 
+import com.example.samdiclass1.domain.item.dto.request.CreateItemRequest;
+import com.example.samdiclass1.domain.item.dto.response.ItemResponse;
+import com.example.samdiclass1.domain.item.dto.request.UpdateItem;
+import com.example.samdiclass1.domain.item.entity.Item;
+import com.example.samdiclass1.domain.item.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
