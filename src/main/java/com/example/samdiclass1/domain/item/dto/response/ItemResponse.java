@@ -15,7 +15,7 @@ public record ItemResponse(
                 item.getType(),
                 item.getAttackPower(),
                 item.getDurability(),
-                item.getEnchancedLevel()
+                item.getEnhancedLevel()
         );
     }
 }

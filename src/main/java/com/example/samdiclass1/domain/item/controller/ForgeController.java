@@ -2,6 +2,8 @@ package com.example.samdiclass1.domain.item.controller;
 
 
 import com.example.samdiclass1.domain.item.dto.request.CreateItemRequest;
+import com.example.samdiclass1.domain.item.dto.request.EnhanceRequest;
+import com.example.samdiclass1.domain.item.dto.request.EnhanceResponse;
 import com.example.samdiclass1.domain.item.dto.request.UpdateItem;
 import com.example.samdiclass1.domain.item.dto.response.ItemResponse;
 import com.example.samdiclass1.domain.item.service.ForgeService;
@@ -35,5 +37,10 @@ public class ForgeController {
     @DeleteMapping
     public void deleteItem(@RequestParam String name) {
         forgeService.deleteItem(name);
+    }
+
+    @PatchMapping("/enhance")
+    public EnhanceResponse enhance(@RequestBody EnhanceRequest request) {
+        return forgeService.enhance(request);
     }
 }
