@@ -1,4 +1,4 @@
-package com.example.samdiclass1.print;
+package com.example.samdiclass1.domain.print.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

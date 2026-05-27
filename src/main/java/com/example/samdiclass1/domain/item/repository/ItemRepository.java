@@ -1,5 +1,6 @@
-package com.example.samdiclass1.item;
+package com.example.samdiclass1.domain.item.repository;
 
+import com.example.samdiclass1.domain.item.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

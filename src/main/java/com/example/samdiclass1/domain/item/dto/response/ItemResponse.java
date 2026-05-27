@@ -1,4 +1,6 @@
-package com.example.samdiclass1.item;
+package com.example.samdiclass1.domain.item.dto.response;
+
+import com.example.samdiclass1.domain.item.entity.Item;
 
 public record ItemResponse(
         String name,
@@ -13,7 +15,7 @@ public record ItemResponse(
                 item.getType(),
                 item.getAttackPower(),
                 item.getDurability(),
-                item.getEnchancedLevel()
+                item.getEnhancedLevel()
         );
     }
 }

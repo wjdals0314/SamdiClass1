@@ -1,4 +1,4 @@
-package com.example.samdiclass1.item;
+package com.example.samdiclass1.domain.item.entity;
 
 
 import jakarta.persistence.*;
@@ -11,7 +11,7 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 @NoArgsConstructor
-@Table(name = "itmes")
+@Table(name = "items")
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Item {
     private int attackPower; // 공격력
 
     @Setter // 수정이 될 수 있음
-    private int enchancedLevel; // 강화 레벨
+    private int enhancedLevel; // 강화 레벨
     @Setter
     private int durability; // 내구도
 }
